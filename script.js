@@ -1,3 +1,4 @@
+// Dados da leaderboard
 const data = {
     "extra-short":[["zDeletex",1.95],["RoidEs",2.0],["Nickzadas",2.0],["RJ",2.0],["jogadinhas",2.0],["Vzku",2.05],["Abacate",2.05],["Opku",2.05],["bielxyz",2.05],["junin",2.05],["izprite",2.05],["deathlly",2.05],["Xiteeeeyz",2.05],["kirosh",2.05],["Xuyie",2.1],["Resgado",2.1],["Nesix",2.1],["Faxe i",2.1],["AmoFazerTelly",2.1]],
     "short":[["RJ",3.75],["zDeletex",3.75],["Thirty",3.8],["RoidEs",3.8],["Vzku",3.8],["Nickzadas",3.8],["izprite",3.8],["Limaaas",3.85],["abacatebals",3.85],["XuyieTheG",3.85],["Resgado",3.85],["opku",3.85],["jogadinhas",3.85],["Junin",3.85],["sant",3.85],["XiteyZ",3.85],["deathlly",3.85],["bielzxy",3.9],["faxxey",3.9],["fallen",3.9]],
@@ -8,6 +9,7 @@ const data = {
     "onestack":[["Thirty",11.4],["Opku",11.6],["XuyeWhatsApp",11.8],["Nesix",11.8],["jogadinhas",11.8],["Deathlly",11.8],["Vzku",11.85],["Abacate",11.85],["Pxdrq",11.85],["kirosh",11.9]]
 };
 
+// Preenche as tabelas
 for(const mode in data){
     const tbody=document.querySelector(`#${mode} tbody`);
     data[mode].forEach(([name,score])=>{
