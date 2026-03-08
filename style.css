@@ -1,80 +1,42 @@
-@font-face{
-font-family:GothicWar;
-src:url("fonts/GothicWar.otf");
+@font-face {
+    font-family: 'GothicWar';
+    src: url('fonts/GothicWar.otf') format('opentype');
 }
 
-body{
-background:black;
-color:white;
-font-family:Arial;
-margin:0;
-text-align:center;
+body {
+    font-family: 'GothicWar', sans-serif;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
-header{
-padding:40px;
-background:#0d0d0d;
-border-bottom:2px solid #8b0000;
+h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #ffcc00;
 }
 
-h1{
-font-family:GothicWar;
-font-size:60px;
-color:#8b0000;
+.mode {
+    margin-bottom: 50px;
 }
 
-.intro{
-max-width:700px;
-margin:auto;
-opacity:0.8;
+table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1.2em;
 }
 
-nav{
-margin:30px;
+th, td {
+    border: 1px solid #fff;
+    padding: 10px;
 }
 
-button{
-background:#8b0000;
-border:none;
-color:white;
-padding:12px 20px;
-margin:5px;
-cursor:pointer;
-font-size:16px;
-border-radius:6px;
-transition:0.3s;
+th {
+    background-color: #222;
 }
 
-button:hover{
-background:#b30000;
-}
-
-.category{
-max-width:700px;
-margin:auto;
-padding:20px;
-}
-
-.hidden{
-display:none;
-}
-
-.player{
-display:flex;
-justify-content:space-between;
-background:#111;
-padding:12px;
-margin:8px 0;
-border-left:4px solid #8b0000;
-border-radius:4px;
-}
-
-.name{
-font-family:GothicWar;
-font-size:20px;
-}
-
-.time{
-color:#ff4d4d;
-font-weight:bold;
+tr:nth-child(even) {
+    background-color: #1a1a1a;
 }
