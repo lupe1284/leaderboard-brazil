@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FastBuilder BR Leaderboard</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Segoe UI,Arial;
+background:#0a1931;
+color:white;
+}
+
+header{
+text-align:center;
+padding:30px;
+background:linear-gradient(90deg,#009739,#ffdf00);
+color:#002776;
+font-size:30px;
+font-weight:bold;
+}
+
+.tabs{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+padding:15px;
+}
+
+.tab{
+background:#009739;
+padding:10px 18px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+transition:.2s;
+}
+
+.tab:hover{
+background:#ffdf00;
+color:#002776;
+}
+
+.search{
+text-align:center;
+margin:15px;
+}
+
+.search input{
+padding:10px;
+border-radius:6px;
+border:none;
+width:220px;
+}
+
+.section{
+display:none;
+padding:20px;
+max-width:900px;
+margin:auto;
+}
+
+.active{
+display:block;
+}
+
+.top3{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-bottom:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#12254a;
+padding:15px;
+border-radius:10px;
+text-align:center;
+width:140px;
+}
+
+.card img{
+width:50px;
+}
+
+.gold{border:2px solid gold}
+.silver{border:2px solid silver}
+.bronze{border:2px solid #cd7f32}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:10px;
+border-bottom:1px solid #333;
+}
+
+th{
+background:#002776;
+}
+
+.player{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.player img{
+width:24px;
+height:24px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>🇧🇷 FastBuilder BR Leaderboard</header>
+
+<div class="tabs">
+<div class="tab" onclick="showTab('extra')">EXTRASHORT</div>
+<div class="tab" onclick="showTab('short')">SHORT</div>
+<div class="tab" onclick="showTab('normal')">NORMAL</div>
+<div class="tab" onclick="showTab('long')">LONG</div>
+<div class="tab" onclick="showTab('inclined')">INCLINED</div>
+<div class="tab" onclick="showTab('inclinedshort')">INCLINED SHORT</div>
+<div class="tab" onclick="showTab('onestack')">ONESTACK</div>
+</div>
+
+<div class="search">
+<input id="search" placeholder="Buscar player..." onkeyup="searchPlayer()">
+</div>
+
+<div id="container"></div>
+
+<script>
+
+const data = {
+
+extra:[
+["zDeletex",1.95],
+["RoidEs",2.0],
+["Nickzadas",2.0],
+["RJ",2.0],
+["jogadinhas",2.0],
+["Vzku",2.05],
+["Abacate",2.05],
+["Opku",2.05],
+["bielxyz",2.05],
+["junin",2.05],
+["izprite",2.05],
+["deathlly",2.05],
+["Xiteeeeyz",2.05],
+["kirosh",2.05],
+["Xuyie",2.1],
+["Resgado",2.1],
+["Nesix",2.1],
+["Faxei",2.1],
+["AmoFazerTelly",2.1]
+],
+
+short:[
+["RJ",3.75],
+["zDeletex",3.75],
+["Thirty",3.8],
+["RoidEs",3.8],
+["Vzku",3.8],
+["Nickzadas",3.8],
+["izprite",3.8],
+["Limaaas",3.85],
+["abacatebals",3.85],
+["XuyieTheG",3.85]
+],
+
+normal:[
+["RJ",7.25],
+["zDeletex",7.25],
+["Rooides",7.3],
+["Vzku",7.3],
+["Thirty",7.3],
+["izprite",7.3],
+["Xiteey",7.3]
+],
+
+long:[
+["RJ",12.1],
+["zDeletex",12.15],
+["Junin",12.2],
+["izprite",12.2],
+["Vzku",12.25],
+["Nickzadas",12.4]
+],
+
+inclined:[
+["Thirty",6.6],
+["guqa",7.25],
+["Bzuki",7.55],
+["jogadinhas",7.7],
+["Limaaas",8.0]
+],
+
+inclinedshort:[
+["RJ",2.95],
+["Nickzadas",2.95],
+["bielxyz1",3.15],
+["Thirty",3.25],
+["Vzku",3.3],
+["jogadinhas",3.3]
+],
+
+onestack:[
+["Thirty",11.4],
+["Opku",11.6],
+["XuyeWhatsApp",11.8],
+["Nesix",11.8],
+["jogadinhas",11.8],
+["Deathlly",11.8]
+]
+
+};
+
+function render(category){
+
+let players=data[category];
+
+let html=`<div class="section active">`;
+
+html+=`<div class="top3">`;
+
+players.slice(0,3).forEach((p,i)=>{
+
+let medal=["gold","silver","bronze"][i];
+
+html+=`
+<div class="card ${medal}">
+<img src="https://crafatar.com/avatars/${p[0]}">
+<h3>${p[0]}</h3>
+<p>${p[1]}s</p>
+</div>
+`;
+
+});
+
+html+=`</div>`;
+
+html+=`<table>
+<tr>
+<th>#</th>
+<th>Player</th>
+<th>Tempo</th>
+</tr>`;
+
+players.forEach((p,i)=>{
+
+html+=`
+<tr>
+<td>${i+1}</td>
+<td class="player">
+<img src="https://crafatar.com/avatars/${p[0]}">
+${p[0]}
+</td>
+<td>${p[1]}</td>
+</tr>
+`;
+
+});
+
+html+=`</table></div>`;
+
+document.getElementById("container").innerHTML=html;
+
+}
+
+function showTab(tab){
+render(tab)
+}
+
+function searchPlayer(){
+
+let input=document.getElementById("search").value.toLowerCase()
+let rows=document.querySelectorAll("tbody tr")
+
+rows.forEach(r=>{
+r.style.display=r.innerText.toLowerCase().includes(input)?"":"none"
+})
+
+}
+
+render("extra")
+
+</script>
+
+</body>
+</html>
