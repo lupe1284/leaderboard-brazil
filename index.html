@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bridging Leaderboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Bridging Leaderboard</h1>
+
+<p class="intro">
+Ranking da comunidade de bridging. Compare tempos, descubra os melhores
+jogadores e veja quem domina cada categoria.
+</p>
+
+</header>
+
+<nav>
+
+<button onclick="showCategory('extra')">Extra Short</button>
+<button onclick="showCategory('short')">Short</button>
+<button onclick="showCategory('normal')">Normal</button>
+<button onclick="showCategory('long')">Long</button>
+<button onclick="showCategory('inclined')">Inclined</button>
+<button onclick="showCategory('onestack')">Onestack</button>
+
+</nav>
+
+<section id="leaderboard">
+
+<div class="category" id="extra">
+
+<h2>Extra Short</h2>
+
+<div class="player">
+<span class="rank">🥇</span>
+<span class="name">Thirty</span>
+<span class="time">6.60s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥈</span>
+<span class="name">guqa</span>
+<span class="time">7.25s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥉</span>
+<span class="name">Bzuki</span>
+<span class="time">7.55s</span>
+</div>
+
+</div>
+
+
+<div class="category hidden" id="short">
+
+<h2>Short</h2>
+
+<div class="player">
+<span class="rank">🥇</span>
+<span class="name">Player1</span>
+<span class="time">8.10s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥈</span>
+<span class="name">Player2</span>
+<span class="time">8.40s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥉</span>
+<span class="name">Player3</span>
+<span class="time">8.75s</span>
+</div>
+
+</div>
+
+
+<div class="category hidden" id="normal">
+
+<h2>Normal</h2>
+
+<div class="player">
+<span class="rank">🥇</span>
+<span class="name">PlayerA</span>
+<span class="time">10.20s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥈</span>
+<span class="name">PlayerB</span>
+<span class="time">10.80s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥉</span>
+<span class="name">PlayerC</span>
+<span class="time">11.10s</span>
+</div>
+
+</div>
+
+
+<div class="category hidden" id="long">
+
+<h2>Long</h2>
+
+<div class="player">
+<span class="rank">🥇</span>
+<span class="name">PlayerX</span>
+<span class="time">14.30s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥈</span>
+<span class="name">PlayerY</span>
+<span class="time">15.00s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥉</span>
+<span class="name">PlayerZ</span>
+<span class="time">15.50s</span>
+</div>
+
+</div>
+
+
+<div class="category hidden" id="inclined">
+
+<h2>Inclined</h2>
+
+<div class="player">
+<span class="rank">🥇</span>
+<span class="name">Thirty</span>
+<span class="time">6.60s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥈</span>
+<span class="name">guqa</span>
+<span class="time">7.25s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥉</span>
+<span class="name">Bzuki</span>
+<span class="time">7.55s</span>
+</div>
+
+</div>
+
+
+<div class="category hidden" id="onestack">
+
+<h2>Onestack</h2>
+
+<div class="player">
+<span class="rank">🥇</span>
+<span class="name">PlayerOne</span>
+<span class="time">12.00s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥈</span>
+<span class="name">PlayerTwo</span>
+<span class="time">12.50s</span>
+</div>
+
+<div class="player">
+<span class="rank">🥉</span>
+<span class="name">PlayerThree</span>
+<span class="time">13.00s</span>
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
