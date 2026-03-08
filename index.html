@@ -4,95 +4,83 @@
     <meta charset="UTF-8">
     <title>Leaderboard Interativa</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Leaderboard de Jogadores</h1>
-        <nav>
-            <button class="tab-btn" data-tab="home">Início</button>
-            <button class="tab-btn" data-tab="leaderboard">Leaderboard</button>
-            <button class="tab-btn" data-tab="credits">Créditos</button>
-            <button class="tab-btn" data-tab="about">Sobre o Criador</button>
+        <nav class="main-menu">
+            <div class="menu-group">
+                <span>Modos:</span>
+                <button class="tab-btn" data-tab="extra-short">Extra Short</button>
+                <button class="tab-btn" data-tab="short">Short</button>
+                <button class="tab-btn" data-tab="normal">Normal</button>
+                <button class="tab-btn" data-tab="long">Long</button>
+                <button class="tab-btn" data-tab="inclined-short">Inclined Short</button>
+                <button class="tab-btn" data-tab="inclined">Inclined</button>
+                <button class="tab-btn" data-tab="onestack">Onestack</button>
+            </div>
+            <div class="menu-group">
+                <span>Informações:</span>
+                <button class="tab-btn" data-tab="home">Início</button>
+                <button class="tab-btn" data-tab="credits">Créditos</button>
+                <button class="tab-btn" data-tab="about">Sobre o Criador</button>
+            </div>
         </nav>
     </header>
 
     <main>
         <!-- Aba inicial -->
         <section id="home" class="tab-content active">
-            <p>Bem-vindo à leaderboard! Aqui você encontra os melhores jogadores em diferentes modos, com suas pontuações atualizadas. Confira cada modo e veja quem está no topo!</p>
+            <p>Bem-vindo à leaderboard! Aqui você encontra os melhores jogadores em diferentes modos, com suas pontuações atualizadas. Clique nos botões acima para navegar entre os modos e informações.</p>
         </section>
 
-        <!-- Aba Leaderboard -->
-        <section id="leaderboard" class="tab-content">
-            <!-- Módulos de cada modo -->
-            <div class="mode" id="extra-short">
-                <h2>EXTRA SHORT</h2>
-                <table>
-                    <thead><tr><th>Nome</th><th>Pontuação</th></tr></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+        <!-- Leaderboard para cada modo -->
+        <section id="extra-short" class="tab-content">
+            <h2>EXTRA SHORT</h2>
+            <table><thead><tr><th>Nome</th><th>Pontuação</th></tr></thead><tbody></tbody></table>
+        </section>
 
-            <div class="mode" id="short">
-                <h2>SHORT</h2>
-                <table>
-                    <thead><tr><th>Nome</th><th>Pontuação</th></tr></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+        <section id="short" class="tab-content">
+            <h2>SHORT</h2>
+            <table><thead><tr><th>Nome</th><th>Pontuação</th></tr></thead><tbody></tbody></table>
+        </section>
 
-            <div class="mode" id="normal">
-                <h2>NORMAL</h2>
-                <table>
-                    <thead><tr><th>Nome</th><th>Pontuação</th></tr></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+        <section id="normal" class="tab-content">
+            <h2>NORMAL</h2>
+            <table><thead><tr><th>Nome</th><th>Pontuação</th></tr></thead><tbody></tbody></table>
+        </section>
 
-            <div class="mode" id="long">
-                <h2>LONG</h2>
-                <table>
-                    <thead><tr><th>Nome</th><th>Pontuação</th></tr></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+        <section id="long" class="tab-content">
+            <h2>LONG</h2>
+            <table><thead><tr><th>Nome</th><th>Pontuação</th></tr></thead><tbody></tbody></table>
+        </section>
 
-            <div class="mode" id="inclined-short">
-                <h2>INCLINED SHORT</h2>
-                <table>
-                    <thead><tr><th>Nome</th><th>Pontuação</th></tr></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+        <section id="inclined-short" class="tab-content">
+            <h2>INCLINED SHORT</h2>
+            <table><thead><tr><th>Nome</th><th>Pontuação</th></tr></thead><tbody></tbody></table>
+        </section>
 
-            <div class="mode" id="inclined">
-                <h2>INCLINED</h2>
-                <table>
-                    <thead><tr><th>Nome</th><th>Pontuação</th></tr></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+        <section id="inclined" class="tab-content">
+            <h2>INCLINED</h2>
+            <table><thead><tr><th>Nome</th><th>Pontuação</th></tr></thead><tbody></tbody></table>
+        </section>
 
-            <div class="mode" id="onestack">
-                <h2>ONESTACK</h2>
-                <table>
-                    <thead><tr><th>Nome</th><th>Pontuação</th></tr></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+        <section id="onestack" class="tab-content">
+            <h2>ONESTACK</h2>
+            <table><thead><tr><th>Nome</th><th>Pontuação</th></tr></thead><tbody></tbody></table>
         </section>
 
         <!-- Créditos -->
         <section id="credits" class="tab-content">
             <h2>Créditos da Leaderboard</h2>
-            <p>Esta leaderboard foi criada com contribuições de:</p>
             <ul>
                 <li>Nickzadas</li>
                 <li>Izprite</li>
             </ul>
         </section>
 
-        <!-- Sobre o Criador -->
+        <!-- Sobre o criador -->
         <section id="about" class="tab-content">
             <h2>Sobre o Criador do Site</h2>
             <p>Este site foi desenvolvido por: fkblupe</p>
