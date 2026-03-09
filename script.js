@@ -59,3 +59,16 @@ tabs.forEach(btn => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
+
+// Pesquisa de jogadores
+const searchInput = document.getElementById('player-search');
+searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+    document.querySelectorAll('.mode-section').forEach(section => {
+        const rows = section.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+            const nameCell = row.cells[0].textContent.toLowerCase();
+            row.style.display = nameCell.includes(query) ? '' : 'none';
+        });
+    });
+});
